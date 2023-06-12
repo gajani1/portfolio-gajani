@@ -1,0 +1,295 @@
+/* style.css */
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+  color: #333;
+}
+
+.nav {
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* Define the animation keyframes */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.home__content {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.about__content {
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.skills__content {
+  animation: fadeInRight 1s ease-in-out;
+}
+
+.projects__content {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.contact__content {
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.footer {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Define the animation keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.bd-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  background-color: #333;
+  color: #fff;
+}
+
+.nav__logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+  color: #ffd700;
+}
+
+/* Home */
+.home {
+  background-color: #ffd700;
+  text-align: center;
+  padding: 100px 0;
+  color: #333;
+background-image: url('girl.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home__title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.home__subtitle {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.home__button {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.home__button:hover {
+  background-color: #555;
+}
+
+/* About */
+.about {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #333;
+}
+
+/* Skills */
+.skills {
+  padding: 80px 0;
+  background-color: #ECECEC;
+}
+
+.skills__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills__item {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Projects */
+.projects {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.project__title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project__description {
+  color: #777;
+}
+
+/* Contact */
+.contact {
+  padding: 80px 0;
+  background-color: #ECECEC;
+  text-align: center;
+}
+
+.contact__form input,
+.contact__form textarea {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.contact__form textarea {
+  height: 120px;
+}
+
+.contact__button {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact__button:hover {
+  background-color: #555;
+}
+
+.contact__social .contact__icon {
+  color: #333;
+  font-size: 24px;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.contact__social .contact__icon:hover {
+  color: #ffd700;
+}
+
+/* Footer */
+.footer {
+  padding: 40px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.footer__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.footer__icon {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer__icon:hover {
+  color: #ffd700;
+}
+
+.footer__contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__contact-info li {
+  margin-bottom: 10px;
+}
+
+.footer__contact-info li i {
+  margin-right: 5px;
+}
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate.animate-visible {
+  opacity: 1;
+  transform: none;
+}
