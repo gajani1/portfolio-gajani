@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weigh Scale</title>
+  <meta name="description" content="Read the weight from a Bluetooth weigh scale in your browser.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Weigh Scale</h1>
+      <p class="sub">Connect a Bluetooth scale and read the weight live.</p>
+    </header>
+
+    <div id="support" class="notice" hidden>
+      This browser can't use Bluetooth. Open this page in Chrome or Edge on desktop or Android,
+      over HTTPS or localhost. You can still try <strong>Demo mode</strong>.
+    </div>
+
+    <section class="card reading" aria-live="polite">
+      <p id="device" class="device">No scale connected</p>
+      <p class="weight"><span id="value">--.--</span> <span id="unit">kg</span></p>
+      <p id="stable" class="stable" data-stable="false">Waiting for a reading</p>
+      <p id="status" class="status" data-state="idle">Not connected.</p>
+    </section>
+
+    <div class="actions">
+      <button id="connect" class="primary">Connect scale</button>
+      <button id="demo">Demo mode</button>
+      <button id="disconnect" hidden>Disconnect</button>
+    </div>
+    <div class="actions">
+      <button id="save" disabled>Save reading</button>
+      <button id="unit-toggle">Show lb</button>
+    </div>
+
+    <section class="card">
+      <div class="history-head">
+        <h2>Saved readings</h2>
+        <button id="clear" class="link" hidden>Clear</button>
+      </div>
+      <ul id="history"></ul>
+    </section>
+
+    <footer>
+      Works with scales that use the standard Bluetooth Weight Scale (0x181D) or
+      Body Composition (0x181B) service. Readings are stored only in this browser.
+    </footer>
+  </main>
+  <script src="js/parser.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
