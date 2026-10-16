@@ -38,3 +38,14 @@ node test/parser.test.js
 Some scales (for example Xiaomi Mi Scale or many unbranded models) don't use the standard
 service. They won't appear in the device list. Supporting one needs its make and model so
 its data format can be added to `js/parser.js`.
+
+## Command-line reader (no interface)
+
+On a computer with Bluetooth near the scale:
+
+```sh
+pip install bleak
+python read_scale.py
+```
+
+Step on the scale; it prints each reading and then the stable weight in kg.
